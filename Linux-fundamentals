@@ -1,0 +1,116 @@
+## Linux Fundamentals
+
+#1 what is Linux?
+Linux is an open-source, Unix-like operating system built around the Linux kernel.  
+It manages hardware resources and provides an interface for users and applications.
+
+#2 Linux Architecture view
+
+user -- shell(bash) -- kernal -- Hardware
+
+#3 Kernal (Heart)
+
+core of the OS.
+its manage - CPU, Memory, Devices, Processes, Filesystem
+
+#4 Shell
+
+The CLI that allow users to intract with the system.
+most common shell - Bash
+other shell - sh , ksh , zsh
+
+
+#5 Linux File system structure
+
+Open CLI and Run 
+1- cd /  (for root user)
+2- ls -ltr  (will show you file structure)
+
+> / (Root directory)
+> /home (User directories)
+> /etc (confoiguration directories)
+> /var (Logs and variable directories)
+> /bin (essential sys binaries)
+> /usr (installed software)
+> /tmp (temporary files)
+
+- you can open them and view, run (cd <dir_name>)
+
+#6 navigation cmd
+> pwd - print working dir
+> ls - list of files
+> cd dir_name - change dir
+> mkdir - create dir
+> rm file.txt - delete files
+> rm -r folder -delete folder
+> cp file1.txt file2.txt - copy file
+> mv name1 name2  - rename file or dir
+
+
+#7 file view and edit
+> cat file.txt  -content in file
+> head -n 5 file.txt  -first 10 line view
+> vi file.txt  -open text editor (a powerful, modal text editor in Linux)
+> nan0 file.txt  - simple file text editor
+
+
+#8 file permissions
+
+file permission - read, write or execute.
+
+# Understanding Permission Numbers 
+r = 4
+w = 2
+x = 1
+
+eg: 
+> chmod 777 file  - Full access to everyone (never use in prod)
+> chmod 755 file  - Owner full access, others read & execute
+> chmod 644 file  - Owner read/write, others read only
+
+-rwxr-xr--
+It means:
+
+Owner → read, write, execute
+Group → read, execute
+Others → read only
+
+> ls -l  - Lists files with detailed permissions and ownership
+> chmod 755 filename  - Changes file permission using numeric mode
+> chmod u+x filename  - Adds execute permission to file owner
+> chmod g-w filename  - Removes write permission from group
+> chown user filename  - Changes file owner
+> chown user:group filename  - Changes owner and group
+> chgrp group filename  - Changes group ownership
+> umask  - Shows default permission mask
+> umask 022  - Sets default permission mask
+> getfacl filename  - Displays Access Control List (ACL) permissions
+> setfacl -m u:user:rwx filename  - Sets ACL permission for a user
+
+# security best pratices
+1 never use chmod 777 in prod.
+2 always follow least privalage principle.
+3. restrict sensitive files to 600 (only file owner can read and write)
+
+#9 user management
+> whoami  - Shows the current logged-in user
+> id  - Displays user ID (UID), group ID (GID), and groups
+> sudo command  - Executes a command with superuser privileges
+> useradd username  - Creates a new user
+> userdel username  - Deletes an existing user
+> usermod username  - Modifies user properties
+> usermod -aG group username  - Adds user to a group
+> groupadd groupname  - Creates a new group
+> groupdel groupname  - Deletes a group
+> passwd username  - Sets or changes a user password
+> su username  - Switches to another user
+> exit  - Returns to previous user session
+> chage -l username  - Displays password expiry information
+> loginctl list-users  - Lists logged-in users (systemd systems)
+> last  - Shows login history of users
+
+
+
+
+
+
