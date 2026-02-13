@@ -24,15 +24,9 @@ This repository reflect hands-on-system-level understanding.
 
 ## Repositeru Structure
 _
-├── 01-user-management.md
-├── 02-file-permissions.md
-├── 03-process-management.md
-├── 04-package-management.md
-├── 05-networking-basics.md
-├── 06-disk-management.md
-├── 07-shell-scripting-basics.md
-├── scripts/
-└── screenshots/
+|--linux fundamentals
+|--scripts/
+|--screenshots/
 
 --------
 
