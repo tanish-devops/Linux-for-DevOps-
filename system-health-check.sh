@@ -4,7 +4,7 @@
 # Author: Tanish Rai
 # Date: 14/02/2026
 # Description: Professional System Health Monitoring Script
-# Purpose: Displays key system metrics for DevOps/SRE usage
+# Purpose: Displays key system metrics 
 #############################################################
 
 # Exit on error
