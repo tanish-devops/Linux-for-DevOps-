@@ -1,1 +1,42 @@
 
+# Linux Architecture Diagram
+
+
++------------------------------------------------------+
+|                    User Applications                 |
+|             (Firefox, Chrome, Python, etc.)          |
++------------------------------------------------------+
+|                    Shell / GUI                       |
+|           (Bash, Zsh, GNOME, etc.)                   |
++------------------------------------------------------+
+|                 System Libraries                     |
+|            (glibc, libc, OpenSSL, etc.)              |
++------------------------------------------------------+
+|                    System Calls                      |
+|  (open(), read(), write(), fork(), exec(), etc.)    |
++------------------------------------------------------+
+|                    Linux Kernel                      |                  ---------> the heart of the operating system
+|------------------------------------------------------|
+|  Process Mgmt  | Memory Mgmt | File System | Net   |
+|------------------------------------------------------|
+|  Device Drivers (USB, Disk, GPU, Keyboard, etc.)    |
++------------------------------------------------------+
+|                     Hardware                         |
+|  CPU | RAM | Disk | Network | I/O Devices           |
++------------------------------------------------------+
+
+
+
+
+| Layer        | Responsibility                       |
+| ------------ | ------------------------------------ |
+| Applications | End-user programs                    |
+| Shell/GUI    | Interface between user and OS        |
+| Libraries    | Provide APIs to interact with the kernel |
+| System Calls | Entry point to kernel space          |
+| Kernel       | Core of OS (resource manager)        |
+| Drivers      | Hardware communication               |
+| Hardware     | Physical components                  |
+
+
+The kernel acts as an abstraction layer between software and hardware.
