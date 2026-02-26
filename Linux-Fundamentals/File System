@@ -1,0 +1,39 @@
+# Linux File System Hierarchy
+
+/
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+│   ├── user's
+├── lib
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── sbin
+├── tmp
+├── usr
+│   ├── bin
+│   ├── lib
+│   └── share
+└── var
+
+
+| Directory | Purpose                                 |
+| --------- | --------------------------------------- |
+| `/`       | Root directory (top level)              |
+| `/bin`    | Essential user binaries (ls, cp, mv)    |
+| `/sbin`   | System binaries (mount, reboot)         |
+| `/etc`    | Configuration files                     |
+| `/home`   | User home directories                   |
+| `/root`   | Root user home                          |
+| `/boot`   | Bootloader files, kernel images         |
+| `/dev`    | Device files                            |
+| `/proc`   | Virtual process info (kernel interface) |
+| `/usr`    | User utilities and applications         |
+| `/var`    | Variable data (logs, cache)             |
+| `/tmp`    | Temporary files                         |
+| `/lib`    | Shared libraries                        |
