@@ -1,4 +1,4 @@
-#Linux-for-DevOps
+# Linux-for-DevOps
 
 > Overview
 
@@ -31,12 +31,13 @@ Automation of repetitive tasks using Bash scripting
 Security best practices for production-like environments
 
 
+> Repository Structure
 
-Linux-for-DevOps/
-│
-├── linux-fundamentals/   # Command references and system concepts
-├── scripts/              # Automation scripts and admin utilities
-└── screenshots/          # Execution proof and lab demonstrations
+| Directory             | Purpose                                      |
+| --------------------- | -------------------------------------------- |
+| `linux-fundamentals/` | Core Linux concepts and command references   |
+| `scripts/`            | Automation and system administration scripts |
+| `screenshots/`        | Practical execution proof                    |
 
 
 
