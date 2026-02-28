@@ -49,4 +49,5 @@ echo -e "\n${GREEN}--- CPU Information ---${NC}"
 echo "Total CPU Cores: $(nproc)"
 
 # -------------------------------------
-
+# 5️⃣ Uptime
+echo -e "\n⏳ Uptime       : $(uptime -p)"
