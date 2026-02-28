@@ -1,0 +1,24 @@
+	
+# Run as root
+
+Step 1: Create user
+adduser <username>
+
+Step 2: Create shared directory
+mkdir -p /shared/<project-dir>
+
+Step 3: Assign ownership
+chown <username>:<username> /shared/<project-dir>
+
+Step 4: Set directory permissions
+chmod 750 /shared/<project-dir>
+
+Step 5: Verify
+ls -ld /shared/<project-dir>
+
+Step 6: Switch user
+su - <username>
+
+Step 7: Test write access
+cd /shared/<project-dir>
+touch test.txt

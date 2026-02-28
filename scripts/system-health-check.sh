@@ -7,6 +7,8 @@
 # Purpose: Displays key system metrics 
 #############################################################
 
+#!/bin/bash
+
 # Exit on error
 set -e
 
@@ -20,33 +22,30 @@ echo -e "${GREEN}           SYSTEM HEALTH REPORT              ${NC}"
 echo -e "${GREEN}==============================================${NC}"
 
 # Timestamp & Host Info
-echo -e "\n📅 Report Time  : $(date)"
-echo -e "🖥 Hostname     : $(hostname)"
-echo -e "👤 Logged User  : $(whoami)"
+echo -e "\nReport Time  : $(date)"
+echo -e "Hostname     : $(hostname)"
+echo -e "Logged User  : $(whoami)"
 
 # ------------------------------------------------------------
 
-# 1️⃣ CPU Information
-echo
+# 1. CPU Processes (Top 5)
+echo -e "\n${GREEN}--- Top Processes by CPU ---${NC}"
 ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 6
 
 # ------------------------------------------------------------
 
-# 2️⃣ Memory Usage
+# 2. Memory Usage
 echo -e "\n${GREEN}--- Memory Usage ---${NC}"
 free -h
 
 # ------------------------------------------------------------
 
-# 3️⃣ Disk Usage
+# 3. Disk Usage
 echo -e "\n${GREEN}--- Disk Usage ---${NC}"
-df -h --output=source,size,used,avail,pcent,target | grep '^/dev/'
+df -h | grep '^/dev/'
 
 # ------------------------------------------------------------
 
-# 4️⃣ CPU Core Count
+# 4. CPU Core Count
 echo -e "\n${GREEN}--- CPU Information ---${NC}"
 echo "Total CPU Cores: $(nproc)"
-
-# -------------------------------------
-
