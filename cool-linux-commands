@@ -1,0 +1,40 @@
+# Disk & File Analysis Tools
+
+1) ncdu
+
+Definition:
+An interactive disk usage analyzer (NCurses-based) that shows folder sizes sorted in descending order.
+
+Use case:
+Could you quickly identify which directory is consuming disk space on the servers?
+
+> ncdu / 
+
+
+2) tree
+
+Definition:
+Displays directory structure in a recursive tree format.
+
+Use case:
+Visualize project architecture or folder hierarchy.
+
+
+3) bat
+
+Definition:
+Enhanced cat with syntax highlighting, line numbers, and Git integration.
+
+Use case:
+Read code files clearly inside terminal.
+
+bat app.py
+
+4) ranger
+
+Definition:
+Terminal-based file manager with Vim-style navigation.
+
+Use case:
+Navigate, preview, and manage files efficiently without GUI.
+  
