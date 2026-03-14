@@ -1,0 +1,22 @@
+**`/` (root)** — top of the entire filesystem; everything lives under here.
+
+**Common directories:**
+- `/bin` — essential commands like `ls`, `cp`, `mv` available to all users
+- `/etc` — system-wide config files (network, users, services)
+- `/home` — personal directories for each user (`/home/alice`, etc.)
+- `/var` — variable data that grows over time: logs, databases, mail
+- `/tmp` — temporary files, cleared on reboot
+- `/usr` — most user-installed programs and libraries (`/usr/bin`, `/usr/lib`)
+- `/dev` — device files representing hardware (disks, terminals, USB)
+
+**System/virtual directories:**
+- `/proc` — virtual filesystem exposing kernel and process info (not real files)
+- `/sys` — hardware and driver info exposed by the kernel
+- `/boot` — bootloader, kernel image, initial ramdisk
+- `/sbin` — admin-only binaries (`fdisk`, `iptables`)
+- `/lib` — shared libraries needed by `/bin` and `/sbin`
+- `/mnt` / `/opt` — mount points for external filesystems / optional third-party software
+
+
+
+
